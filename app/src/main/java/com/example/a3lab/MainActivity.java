@@ -126,7 +126,9 @@ public class MainActivity extends AppCompatActivity {
         btnEquals.setOnClickListener(v -> {
             compute();
             currentAction = ' ';
-            txtResult.setText(String.valueOf(value1));
+            if (!Double.isNaN(value1)) {
+                txtResult.setText(String.valueOf(value1));
+            }
             value1 = Double.NaN;
         });
 
